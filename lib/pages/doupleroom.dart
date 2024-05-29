@@ -11,40 +11,47 @@ class _DoubleRoomState extends State<DoubleRoom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 119, 63, 43),
+          title: Text(
+            "Double Room",
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
         body: Center(
-      child: Column(
-        children: [
-          Image.asset('assets/double.png'),
-          SizedBox(height: 30),
-          Text("price :"),
-          SizedBox(height: 30),
-          ElevatedButton(
-            onPressed: () async {
-              var result = await showDialog(
-                  context: context,
-                  builder: (ctx) {
-                    return AlertDialog(
-                        title: Text('Do you want the Double room'),
-                        actions: [
-                          TextButton(
-                            onPressed: () {
-                              Navigator.pop(context, false);
-                            },
-                            child: Text('No'),
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.pop(context, true);
-                            },
-                            child: Text('Yes'),
-                          ),
-                        ]);
-                  });
-            },
-            child: Text('Click here'),
-          )
-        ],
-      ),
-    ));
+          child: Column(
+            children: [
+              Image.asset('assets/double.png'),
+              SizedBox(height: 30),
+              Text("price :"),
+              SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () async {
+                  var result = await showDialog(
+                      context: context,
+                      builder: (ctx) {
+                        return AlertDialog(
+                            title: Text('Do you want the Double room'),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context, false);
+                                },
+                                child: Text('No'),
+                              ),
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context, true);
+                                },
+                                child: Text('Yes'),
+                              ),
+                            ]);
+                      });
+                },
+                child: Text('Click here'),
+              )
+            ],
+          ),
+        ));
   }
 }

@@ -14,14 +14,16 @@ class _MyHomePageState extends State<MyHomePage> {
   DateTime? checkOutDate;
   double valuere1 = 0.0;
   double valuere2 = 0.0;
-  var selectValue;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
-        title: Text("Android ATC Hotel"),
+        backgroundColor: const Color.fromARGB(255, 15, 1, 136),
+        title: const Text(
+          "Android ATC Hotel",
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: Center(
         child: Column(
@@ -33,12 +35,15 @@ class _MyHomePageState extends State<MyHomePage> {
             Expanded(
                 flex: 4,
                 child: Container(
+                  padding: const EdgeInsets.all(10),
                   height: 500,
                   child: ListView(
                     children: [
                       Row(
                         children: [
-                          Text("Check-in Date: "),
+                          const Text(
+                            "Check-in Date: ",
+                          ),
                           Text(checkInDate == null
                               ? "Select Date: "
                               : '${checkInDate!.year}- ${checkInDate!.month}- ${checkInDate!.day}'),
@@ -63,7 +68,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Row(
                         children: [
-                          Text("Check-out Date: "),
+                          const Text(
+                            "Check-out Date: ",
+                          ),
                           Text(checkOutDate == null
                               ? "Select Date: "
                               : '${checkOutDate!.year}- ${checkOutDate!.month}- ${checkOutDate!.day}'),
@@ -86,9 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               icon: const Icon(Icons.calendar_today_rounded))
                         ],
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
+                      const SizedBox(height: 10),
                       Row(
                         children: [
                           Text('Adults : $valuere1'),
@@ -104,9 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               }),
                         ],
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
+                      const SizedBox(height: 10),
                       Row(
                         children: [
                           Text('Children : $valuere1'),
@@ -122,25 +125,23 @@ class _MyHomePageState extends State<MyHomePage> {
                               }),
                         ],
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text('Extras:'),
+                      const SizedBox(height: 10),
+                      const Text('Extras:'),
                       FlutGroupedButtons(
-                        data: <String>[
+                        data: const <String>[
                           'Breakfas (10 USD/Day)',
                           'Internet WiFi (5 USD/Day)',
                           'Parking (5 USD/Day)',
                           'Swimming (10 USD/Day)',
                         ],
                         onChanged: (checked) => print(checked),
+                        checkColor: const Color.fromARGB(255, 13, 2, 109),
+                        activeColor: const Color.fromARGB(255, 13, 2, 109),
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text('View:'),
+                      const SizedBox(height: 10),
+                      const Text('View:'),
                       FlutGroupedButtons(
-                        data: <String>[
+                        data: const <String>[
                           'City View',
                           'Sea View',
                         ],
@@ -149,19 +150,24 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Container(
                         width: 300,
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.only(left: 120, right: 120),
                         child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.red,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.zero)),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (ctx) => RoomsPage()));
-                            },
-                            child: Text('Check Room and Rate')),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  const Color.fromARGB(255, 1, 3, 122),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5))),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (ctx) => const RoomsPage()));
+                          },
+                          child: const Text(
+                            'Check Room and Rate',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
                       ),
                     ],
                   ),

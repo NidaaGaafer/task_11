@@ -16,8 +16,8 @@ class _RoomsPageState extends State<RoomsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
-        title: Text("Rooms List"),
+        backgroundColor: Color.fromARGB(255, 15, 1, 136),
+        title: Text("Rooms List", style: TextStyle(color: Colors.white)),
       ),
       body: Center(
         child: Column(
@@ -30,7 +30,7 @@ class _RoomsPageState extends State<RoomsPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       ImText(
-                        path: 'king.jpg',
+                        path: 'king.PNG',
                         name: 'King Room',
                       ),
                       IconButton(
