@@ -13,7 +13,7 @@ class _FamilyRoomState extends State<FamilyRoom> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.brown,
-          title: Text(
+          title: const Text(
             "Family Room",
             style: TextStyle(color: Colors.white),
           ),
@@ -22,37 +22,37 @@ class _FamilyRoomState extends State<FamilyRoom> {
           child: Column(
             children: [
               Image.asset('assets/triple.jpg'),
-              SizedBox(height: 30),
-              Text("price :"),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
+              const Text("price :"),
+              const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () async {
                   var result = await showDialog(
                       context: context,
                       builder: (ctx) {
                         return AlertDialog(
-                            title: Text('Do you want the Family room'),
+                            title: const Text('Do you want the Family room'),
                             actions: [
                               TextButton(
                                 onPressed: () {
                                   Navigator.pop(context, false);
                                 },
-                                child: Text('No'),
+                                child: const Text('No'),
                               ),
                               TextButton(
                                 onPressed: () {
                                   Navigator.pop(context, true);
                                 },
-                                child: Text('Yes'),
+                                child: const Text('Yes'),
                               ),
                             ]);
                       });
                 },
-                child: Text('Click here'),
+                child: const Text('Click here'),
               )
             ],
           ),
         ));
-    ;
+    
   }
 }

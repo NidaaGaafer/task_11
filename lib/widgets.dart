@@ -16,7 +16,7 @@ class ImText extends StatelessWidget {
           width: 100,
           height: 100,
         ),
-        SizedBox(width: 100),
+        const SizedBox(width: 100),
         Container(width: 50, child: Text('$name')),
       ],
     ));

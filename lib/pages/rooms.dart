@@ -16,13 +16,13 @@ class _RoomsPageState extends State<RoomsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 15, 1, 136),
-        title: Text("Rooms List", style: TextStyle(color: Colors.white)),
+        backgroundColor: const Color.fromARGB(255, 15, 1, 136),
+        title: const Text("Rooms List", style: TextStyle(color: Colors.white)),
       ),
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Card(
               child: Column(
                 children: [
@@ -38,16 +38,16 @@ class _RoomsPageState extends State<RoomsPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (ctx) => KingRoom()));
+                                    builder: (ctx) => const KingRoom()));
                           },
-                          icon: Icon(Icons.keyboard_control_key))
+                          icon: const Icon(Icons.keyboard_control_key))
                     ],
                   ),
-                  Text('A room with a king-sized bed')
+                  const Text('A room with a king-sized bed')
                 ],
               ),
             ),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Card(
               child: Column(
                 children: [
@@ -63,16 +63,16 @@ class _RoomsPageState extends State<RoomsPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (ctx) => DoubleRoom()));
+                                    builder: (ctx) => const DoubleRoom()));
                           },
-                          icon: Icon(Icons.keyboard_control_key))
+                          icon: const Icon(Icons.keyboard_control_key))
                     ],
                   ),
-                  Text('A room assigned to two people')
+                  const Text('A room assigned to two people')
                 ],
               ),
             ),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Card(
               child: Column(
                 children: [
@@ -88,12 +88,12 @@ class _RoomsPageState extends State<RoomsPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (ctx) => FamilyRoom()));
+                                    builder: (ctx) => const FamilyRoom()));
                           },
-                          icon: Icon(Icons.keyboard_control_key))
+                          icon: const Icon(Icons.keyboard_control_key))
                     ],
                   ),
-                  Text('A room a ssigned to three or four people')
+                  const Text('A room a ssigned to three or four people')
                 ],
               ),
             )

@@ -12,8 +12,8 @@ class _DoubleRoomState extends State<DoubleRoom> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 119, 63, 43),
-          title: Text(
+          backgroundColor: const Color.fromARGB(255, 119, 63, 43),
+          title: const Text(
             "Double Room",
             style: TextStyle(color: Colors.white),
           ),
@@ -22,33 +22,33 @@ class _DoubleRoomState extends State<DoubleRoom> {
           child: Column(
             children: [
               Image.asset('assets/double.png'),
-              SizedBox(height: 30),
-              Text("price :"),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
+              const Text("price :"),
+              const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () async {
                   var result = await showDialog(
                       context: context,
                       builder: (ctx) {
                         return AlertDialog(
-                            title: Text('Do you want the Double room'),
+                            title: const Text('Do you want the Double room'),
                             actions: [
                               TextButton(
                                 onPressed: () {
                                   Navigator.pop(context, false);
                                 },
-                                child: Text('No'),
+                                child: const Text('No'),
                               ),
                               TextButton(
                                 onPressed: () {
                                   Navigator.pop(context, true);
                                 },
-                                child: Text('Yes'),
+                                child: const Text('Yes'),
                               ),
                             ]);
                       });
                 },
-                child: Text('Click here'),
+                child: const Text('Click here'),
               )
             ],
           ),
